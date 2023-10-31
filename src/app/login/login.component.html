@@ -1,0 +1,14 @@
+<!--{{login}} ->permet le binding-->
+<h2>Nom : </h2>
+<input [disabled]="!isValid()" [(ngModel)] = "nom"/><br/>
+<h2>Prénom : </h2>
+<input [disabled]="!isValid()" [(ngModel)] = "prenom"/><br/><br/>
+<button [disabled]="!isValid()" (click)="desactivation()">Valider</button><br/>
+
+
+
+<div *ngIf="!isValid()">
+    <p>Résultat : </p>
+    <p>Nom : {{nom}}</p>
+    <p>Prénom : {{prenom}}</p>
+</div>
